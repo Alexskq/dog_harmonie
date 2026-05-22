@@ -1,0 +1,169 @@
+---
+import { site } from '../../data/data';
+---
+
+<section id="contact" class="py-20 lg:py-28" style="background-color: var(--color-bg);">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="section-label fade-up">Contact</div>
+        <h2 class="text-3xl lg:text-4xl mb-4 fade-up fade-up-delay-1" style="color: var(--color-text);">
+          Parlons de votre chien
+        </h2>
+        <p class="text-base leading-relaxed mb-8 fade-up fade-up-delay-2" style="color: var(--color-text-muted);">
+          Le premier contact se fait par téléphone. On échange sur vos attentes, les besoins de votre chien, puis je viens chez vous pour un bilan comportemental approfondi.
+        </p>
+
+        <div class="space-y-5 fade-up fade-up-delay-3">
+          <a
+            href={"tel:" + site.phone.replace(/\s/g, "")}
+            class="flex items-center gap-4 p-4 rounded-2xl transition-colors group"
+            style="background-color: var(--color-surface); border: 1px solid var(--color-border);"
+          >
+            <div
+              class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--color-primary);"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.61 4.9 2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l.72-.72a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.42z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-medium mb-0.5" style="color: var(--color-text-muted);">Téléphone</div>
+              <div class="text-base font-semibold" style="color: var(--color-text);">{site.phone}</div>
+            </div>
+          </a>
+
+          <a
+            href={"mailto:" + site.email}
+            class="flex items-center gap-4 p-4 rounded-2xl transition-colors"
+            style="background-color: var(--color-surface); border: 1px solid var(--color-border);"
+          >
+            <div
+              class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--color-surface-alt);"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-medium mb-0.5" style="color: var(--color-text-muted);">Email</div>
+              <div class="text-sm font-semibold" style="color: var(--color-text);">{site.email}</div>
+            </div>
+          </a>
+
+          <div
+            class="flex items-center gap-4 p-4 rounded-2xl"
+            style="background-color: var(--color-surface); border: 1px solid var(--color-border);"
+          >
+            <div
+              class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0"
+              style="background-color: var(--color-surface-alt);"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs font-medium mb-0.5" style="color: var(--color-text-muted);">Zone d'intervention</div>
+              <div class="text-sm font-semibold" style="color: var(--color-text);">{site.location}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-3 mt-6 fade-up fade-up-delay-4">
+          <a
+            href={site.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-colors"
+            style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text);"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            Instagram
+          </a>
+          <a
+            href={site.social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-colors"
+            style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text);"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="rounded-3xl p-8 fade-up fade-up-delay-2"
+        style="background-color: var(--color-surface); border: 1px solid var(--color-border);"
+      >
+        <h3 class="text-xl mb-2 font-semibold" style="font-family: var(--font-heading); color: var(--color-text);">
+          Envoyez un message
+        </h3>
+        <p class="text-sm mb-6" style="color: var(--color-text-muted);">Je vous réponds sous 24h.</p>
+
+        <form
+          action={"mailto:" + site.email}
+          method="get"
+          class="space-y-4"
+        >
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: var(--color-text);" for="name">Votre nom</label>
+              <input
+                id="name"
+                name="subject"
+                type="text"
+                placeholder="Marie Dupont"
+                class="w-full px-4 py-3 rounded-xl text-sm outline-none transition-colors"
+                style="background-color: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text);"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-medium mb-1.5" style="color: var(--color-text);" for="dog">Votre chien</label>
+              <input
+                id="dog"
+                name="dog"
+                type="text"
+                placeholder="Berger Australien, 2 ans"
+                class="w-full px-4 py-3 rounded-xl text-sm outline-none transition-colors"
+                style="background-color: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text);"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium mb-1.5" style="color: var(--color-text);" for="message">Votre demande</label>
+            <textarea
+              id="message"
+              name="body"
+              rows="4"
+              placeholder="Décrivez votre situation et ce que vous souhaitez travailler..."
+              class="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none transition-colors"
+              style="background-color: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text);"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary w-full justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m22 2-7 20-4-9-9-4Z"/>
+              <path d="M22 2 11 13"/>
+            </svg>
+            Envoyer ma demande
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
