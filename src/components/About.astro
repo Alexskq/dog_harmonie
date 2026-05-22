@@ -1,0 +1,78 @@
+---
+import { team } from '../../data/data';
+---
+
+<section id="qui-sommes-nous" class="py-20 lg:py-28" style="background-color: var(--color-bg);">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <div class="section-label fade-up" style="display: inline-flex;">L'équipe</div>
+      <h2 class="text-3xl lg:text-4xl mb-4 fade-up fade-up-delay-1" style="color: var(--color-text);">
+        Qui sommes-nous ?
+      </h2>
+      <p class="text-base max-w-xl mx-auto fade-up fade-up-delay-2" style="color: var(--color-text-muted);">
+        Des passionnés qui ont eux-mêmes vécu les difficultés que vous rencontrez — et qui ont trouvé les bonnes clés.
+      </p>
+    </div>
+
+    <div class="space-y-12">
+      {team.map((member, i) => (
+        <div class={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center fade-up fade-up-delay-${i + 1} ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+          <div class="relative">
+            <div
+              class="absolute -top-4 -left-4 w-full h-full rounded-3xl"
+              style={`background-color: ${i === 0 ? 'var(--color-surface-alt)' : 'var(--color-surface)'}; z-index: 0;`}
+            ></div>
+            <div class="relative rounded-3xl overflow-hidden" style="z-index: 1; aspect-ratio: 4/3;">
+              <img
+                src={member.photo}
+                alt={member.name}
+                class="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="absolute -bottom-5 -right-5 rounded-2xl px-4 py-3 z-10"
+              style="background-color: var(--color-bg); box-shadow: 0 8px 30px rgba(0,0,0,0.1);"
+            >
+              <div class="text-xs font-medium mb-0.5" style="color: var(--color-text-muted);">Compagnon(s)</div>
+              <div class="text-sm font-semibold" style="color: var(--color-primary);">{member.dogs}</div>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-sm font-medium mb-1" style="color: var(--color-accent);">{member.role}</p>
+            <h3 class="text-2xl lg:text-3xl mb-4" style="font-family: var(--font-heading); color: var(--color-text);">
+              {member.name}
+            </h3>
+            <p class="text-base leading-relaxed mb-5" style="color: var(--color-text-muted);">
+              {member.bio}
+            </p>
+
+            <blockquote
+              class="border-l-4 pl-4 mb-6 italic text-base"
+              style="border-color: var(--color-accent); color: var(--color-text);"
+            >
+              "{member.quote}"
+            </blockquote>
+
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: var(--color-text-muted);">
+                Formations & certifications
+              </p>
+              <ul class="flex flex-wrap gap-2">
+                {member.certifications.map((cert) => (
+                  <li
+                    class="text-xs font-medium px-3 py-1.5 rounded-full"
+                    style="background-color: var(--color-surface-alt); color: var(--color-primary);"
+                  >
+                    {cert}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

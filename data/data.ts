@@ -128,6 +128,27 @@ export const testimonials = [
   },
 ];
 
+export const team = [
+  {
+    name: "Alex",
+    role: "Fondateur & Éducateur canin comportementaliste",
+    bio: "Mon aventure a commencé avec Falcko, mon Parson Russell Terrier. Après une carrière de manager en grande distribution et des voyages à l'étranger, j'ai tout arrêté pour me recentrer — et permettre à Falcko de s'épanouir. Ce qui devait être un moyen d'aider mon chien est devenu une vraie vocation.",
+    quote: "Avec de la volonté, de l'amour et les bonnes clés, tout est possible.",
+    dogs: "Falcko, Koda & Saucisse",
+    photo: "/photos/alex.jpg",
+    certifications: ["Certificat ACACED", "Formation 6 mois Paw's Up Éducation (Lille)", "Soins coopératifs", "Premiers secours canins", "Enseignement des loisirs canins", "Bénévolat associations animalières"],
+  },
+  {
+    name: "Caroline",
+    role: "Éducatrice canine",
+    bio: "Caro nous a rejoints fin 2022. Dynamique, amoureuse des loulous, elle apporte ses diplômes et son expérience pour accompagner les suivis éducatifs avec enthousiasme.",
+    quote: "L'humain et le chien au cœur des relations.",
+    dogs: "Sky (Beaucerone)",
+    photo: "/photos/caroline.jpg",
+    certifications: ["Diplôme d'éducation canine", "Suivis éducatifs"],
+  },
+];
+
 export const faqs = [
   {
     q: "À partir de quel âge peut-on commencer l'éducation ?",
